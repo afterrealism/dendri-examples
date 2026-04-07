@@ -1,0 +1,38 @@
+# Node / TypeScript
+node_modules/
+dist/
+build/
+*.log
+
+# Frameworks
+.svelte-kit/
+.parcel-cache/
+.cache/
+.wrangler/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# AI assistant scratch
+.claude/
+.cursor/
+
+# Local pack output
+*.tgz
+
+# Playwright (per-example)
+test-results/
+playwright-report/
+.playwright-mcp/
