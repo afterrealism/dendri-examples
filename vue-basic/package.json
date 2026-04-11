@@ -1,0 +1,20 @@
+{
+	"name": "vue-basic",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"check": "npm run build",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@afterrealism/dendri-client": "^2.6.0",
+		"vue": "^3.5.22"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-vue": "^6.0.1",
+		"vite": "^7.3.2"
+	}
+}

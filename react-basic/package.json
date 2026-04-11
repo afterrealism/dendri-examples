@@ -1,0 +1,21 @@
+{
+	"name": "react-basic",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"check": "npm run build",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@afterrealism/dendri-client": "^2.6.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1"
+	},
+	"devDependencies": {
+		"@vitejs/plugin-react": "^4.7.0",
+		"vite": "^7.3.2"
+	}
+}
