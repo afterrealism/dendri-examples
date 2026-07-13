@@ -11,7 +11,8 @@ function resolveDendriOptions() {
 			secure: false,
 			path: "/",
 			debug: 0,
-			fetchTurnCredentials: false,
+			fetchTurnCredentials: true,
+			enableRelay: true,
 		};
 	}
 	const u = new URL(url);
@@ -23,7 +24,8 @@ function resolveDendriOptions() {
 		secure: isSecure,
 		apiKey: env.PUBLIC_DENDRI_API_KEY,
 		debug: 0,
-		fetchTurnCredentials: false,
+		fetchTurnCredentials: true,
+		enableRelay: true,
 	};
 }
 
@@ -56,8 +58,10 @@ function readSettings(map: import("yjs").Map<unknown>): LayersState {
 		out[id] = { ...DEFAULTS[id] };
 		for (const prop of PROPS) {
 			const v = map.get(key(id, prop));
-			if (v !== undefined) {
-				(out[id] as Record<string, unknown>)[prop] = v;
+			if (prop === "visible" && typeof v === "boolean") {
+				out[id] = { ...out[id], visible: v };
+			} else if (prop !== "visible" && typeof v === "number") {
+				out[id] = { ...out[id], [prop]: v };
 			}
 		}
 	}

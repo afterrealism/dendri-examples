@@ -285,6 +285,8 @@
 					<div class="flex justify-center mt-2">
 						<div
 							bind:this={joystickEl}
+							role="application"
+							aria-label="Touch joystick. Use arrow keys or WASD with a keyboard."
 							ontouchstart={handleJoystickStart}
 							ontouchmove={handleJoystickMove}
 							ontouchend={handleJoystickEnd}

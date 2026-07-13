@@ -13,7 +13,7 @@
 	let roomId = $state("dendri-layers");
 	let joined = $state(false);
 	let canvasEl: HTMLCanvasElement | undefined = $state();
-	let deck: Deck<unknown> | undefined;
+	let deck: Deck | undefined;
 
 	const INITIAL_VIEW_STATE = {
 		longitude: SEATTLE[0],

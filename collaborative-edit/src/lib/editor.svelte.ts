@@ -13,7 +13,10 @@ function resolveDendriOptions() {
 			port: 9876,
 			secure: false,
 			path: "/",
+			apiKey: env.PUBLIC_DENDRI_API_KEY,
 			debug: 0,
+			fetchTurnCredentials: true,
+			enableRelay: true,
 		};
 	}
 	const u = new URL(url);
@@ -25,6 +28,8 @@ function resolveDendriOptions() {
 		secure: isSecure,
 		apiKey: env.PUBLIC_DENDRI_API_KEY,
 		debug: 0,
+		fetchTurnCredentials: true,
+		enableRelay: true,
 	};
 }
 
@@ -87,6 +92,7 @@ interface EditorOptions {
 	port?: number;
 	secure?: boolean;
 	path?: string;
+	apiKey?: string;
 	debug?: number;
 }
 
@@ -99,8 +105,10 @@ export function createCollaborativeEditor(options: EditorOptions = {}) {
 			port: options.port ?? defaults.port,
 			secure: options.secure ?? defaults.secure,
 			path: options.path ?? defaults.path,
+			apiKey: options.apiKey ?? defaults.apiKey,
 			debug: options.debug ?? defaults.debug,
-			fetchTurnCredentials: false,
+			fetchTurnCredentials: true,
+			enableRelay: true,
 		},
 		awareness: true,
 	});

@@ -11,7 +11,8 @@ const DENDRI_OPTIONS = {
 	apiKey: import.meta.env.VITE_DENDRI_API_KEY,
 	path: serverUrl.pathname,
 	debug: 0,
-	fetchTurnCredentials: false,
+	fetchTurnCredentials: true,
+	enableRelay: true,
 };
 
 export default function App() {

@@ -123,6 +123,8 @@
 
 				<div
 					bind:this={canvas}
+					role="region"
+					aria-label="Shared cursor canvas"
 					onmousemove={handleMouseMove}
 					onmouseleave={handleMouseLeave}
 					class="relative flex-1 min-h-[60vh] sm:min-h-[500px] bg-white border border-neutral-200 rounded-lg overflow-hidden cursor-none"

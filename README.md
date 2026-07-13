@@ -43,10 +43,10 @@ then set two env vars before `npm run dev`:
 
 ```bash
 # SvelteKit demos (cursors, presence, chat, whiteboard, video-chat, file-transfer, game, collaborative-*)
-PUBLIC_DENDRI_URL="wss://signal.dendri.dev" PUBLIC_DENDRI_API_KEY="dk_your_key" npm run dev
+PUBLIC_DENDRI_URL="https://signal.dendri.dev" PUBLIC_DENDRI_API_KEY="dk_your_key" npm run dev
 
 # react-basic / vue-basic
-VITE_DENDRI_URL="wss://signal.dendri.dev" VITE_DENDRI_API_KEY="dk_your_key" npm run dev
+VITE_DENDRI_URL="https://signal.dendri.dev" VITE_DENDRI_API_KEY="dk_your_key" npm run dev
 ```
 
 **Self-host (free)** — run the open-source server yourself (see the
